@@ -15,7 +15,7 @@
             <div class="mb-3">
                 <label for="password" class="form-label">Senha</label>
                 <input type="password" wire:model="password" id="password"
-                class="form-control" placeholder="Infomre sua Senha">
+                class="form-control" placeholder="Informe sua Senha">
                 @error('password')
                     <span class="text-danger small">{{ $message}}</span>
                 @enderror

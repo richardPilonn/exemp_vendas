@@ -16,6 +16,7 @@ return new class extends Migration
             $table->bigInteger('user_id')->unsigned()->nullable(false);
             $table->string('nome', 80)->nullable(false);
             $table->string('cpf', 11)->unique()->nullable(false);
+            $table->enum('cargo', ['vendedor', 'manutencao', 'estoque'])->default('vendedor');
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
